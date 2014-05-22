@@ -12,35 +12,33 @@ docpadConfig =
     # Specify some site properties
     site:
       # The production url of our website
-      url: "http://website.com"
+      url: "http://www.meteortime.com"
 
       # Here are some old site urls that you would like to redirect from
       oldUrls: [
-        'www.website.com',
-        'website.herokuapp.com'
       ]
 
       # The default title of our website
-      title: "Your Website"
+      title: "Meteortime"
 
       # The website description (for SEO)
       description: """
-        When your website appears in search results in say Google, the text here will be shown underneath your website's title.
+        Meteor shower schedules and times for 2014. Upcoming meteor showers: May, August, October, November, and December 2014.
         """
 
       # The website keywords (for SEO) separated by commas
       keywords: """
-        place, your, website, keywoards, here, keep, them, related, to, the, content, of, your, website
+        meteor showers, meteor shower times, meteor shower calendar, Camelopardalid, 209p, comet, perseids, orionids, leonids, geminids
         """
 
       # The website author's name
-      author: "Your Name"
+      author: "Chris Barber"
 
       # The website author's email
-      email: "your@email.com"
+      email: "cjbarber@stanford.edu"
 
       # Your company's name
-      copyright: "© Your Company 2013"
+      copyright: "© Meteortime 2014"
 
 
     # Helper Functions

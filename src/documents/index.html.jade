@@ -1,23 +1,74 @@
 --- yaml
 layout: 'default'
-title: 'Home'
+title: 'Meteor Showers 2014'
 ---
 
-// Main hero unit for a primary marketing message or call to action.
-.jumbotron
-  h1 Welcome to your new site!
-  p: :markdown
-    We've copied over the [Twitter Bootstrap Skeleton](https://github.com/docpad/twitter-bootstrap.docpad) for you already, which is what you're currently viewing.
-    <br>
-    Step through the guide below and we'll walk you through the process of working with your first docpad website :-)
+div.jumbotron
+  h1 Meteor Showers in 2014
+  h3 2014 Meteor Shower Calendar
+  table.table.table-bordered
+    thead
+      tr
+        th Shower Name
+        th 2014 Peak Date (Night Of)
+    tbody
+      tr
+        td
+          strike Quadrantids
+        td
+          strike Thursday January 2nd
+      tr
+        td
+          strike Lyrids
+        td
+          strike Monday April 21st
+      tr
+        td
+          strike Eta Aquarids
+        td
+          strike Monday May 5th
+      tr
+        td Camelopardalids
+        td Friday May 23rd
+      tr 
+        td Perseids
+        td August 12th
+      tr 
+        td Orionids
+        td October 21st
+      tr
+        td Leonids
+        td November 16th and 17th
+      tr
+        td Geminids
+        td December 13th
 
-// Example row of columns.
-.row
-  .col-md-6
-    h2 Docpad
-    p DocPad takes that good ol' simple approach of writing files and wraps it with the best modern innovations, providing an awesome intuitive, liberating and empowering solution for HTML5 web development.</p>
-    p: a.btn.btn-default(href="https://github.com/bevry/docpad") Visit Website
-  .col-md-6
-    h2 Twitter Bootstrap
-    p Bootstrap is a toolkit from Twitter designed to kickstart development of webapps and sites. It includes base CSS and HTML for typography, forms, buttons, tables, grids, navigation, and more.</p>
-    p: a.btn.btn-default(href="http://twitter.github.com/bootstrap/") Visit Website
+  p
+    | Visit the 
+    a(href='#') May 23rd 2014 Camelopardalids/Comet 209P/LINEAR 
+    | viewing guide.
+
+div.jumbotron
+  h2 Let someone else know about cool stuff in the sky.
+  #share-buttons
+    a.twitter-share-button(href='https://twitter.com/share', 
+      data-text='Upcoming Meteor Shower - Camelopardalids on May 23rd 2014: ', 
+      data-counturl='http://www.meteortime.com', 
+      data-related='chrisbarber:The creator. Follow for more creations!',  
+      data-lang='en')
+        | Tweet
+    script.
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+    br
+    div.fb-like(data-send="true" data-type='button_count' data-width="450" data-show-faces="true")
+
+div.jumbotron
+  h2 Find out about the next shower early!
+  a.twitter-follow-button(href='https://twitter.com/chrisbarber', data-show-count='false', data-size='large', data-show-screen-name='false') Follow @chrisbarber
+    script
+      !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+  form(role='form')#mc-form
+    .form-group
+      label(for='mc-email') Less than 15 emails per year, guaranteed.
+      input#mc-email.form-control(type='email', placeholder='Enter email')
+    button.btn.btn-default(type='submit') Get Shower Notifications!

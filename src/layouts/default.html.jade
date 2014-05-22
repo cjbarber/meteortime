@@ -8,6 +8,9 @@
 //- jQuery
 - scripts.add(["/vendor/jquery/dist/jquery.js"])
 
+//- Ajaxchimp
+- scripts.add(["/vendor/ajaxchimp/jquery.ajaxchimp.min.js"])
+
 //- Bootstrap
 - scripts.add(["/vendor/components-bootstrap/js/bootstrap.js"])
 - styles.add(["/vendor/components-bootstrap/css/bootstrap.css"])
@@ -59,18 +62,34 @@ html(lang="en")
     != styles.toHTML()
 
   body
+    div#fb-root
+    
+    script.
+      (function(d, s, id) {
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=305093612976260&version=v2.0";
+         fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
 
-    // Markup
-    nav.navbar.navbar-default.navbar-fixed-top
-      .container
-        .navbar-header
-          a.navbar-brand(href="/") Welcome
-        ul.nav.navbar-nav
-          each doc in getCollection('pages').toJSON()
-            - clazz = (document.url === doc.url) ? 'active' : null
-            li(typeof="sioc:Page", about=doc.url, class=clazz)
-              a(href=doc.url, property="dc:title")= doc.title
     .container
+      .navbar.navbar-default(role='navigation')
+        .container-fluid
+          .navbar-header
+            button.navbar-toggle(type='button', data-toggle='collapse', data-target='.navbar-collapse')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='/') Meteortime
+          .navbar-collapse.collapse
+            ul.nav.navbar-nav
+              each doc in getCollection('posts').toJSON()
+                - clazz = (document.url === doc.url) ? 'active' : null
+                li(typeof="sioc:Post", about=doc.url, class=clazz)
+                  a(href=doc.url, property="dc:title")= doc.title
+
       section#content.content!= content
       hr
       footer
