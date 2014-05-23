@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Meteortime</title>
+  <link href="http://www.meteortime.com/atom.xml" rel="self"/>
+  <link href="http://www.meteortime.com"/>
+  <updated>2014-05-23T02:19:21.238Z</updated>
+  <id>http://www.meteortime.com</id>
+  <author>
+    <name>Chris Barber</name>
+    <email>cjbarber@stanford.edu</email>
+  </author>
+
+  
+</feed>
